@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "proyecto-final-curso-backend-molina",
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
     "bcrypt": "^5.1.1",
