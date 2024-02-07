@@ -1,0 +1,380 @@
+paths:
+  /api/cart:
+    post:
+      summary: Crea un nuevo carrito vacio en la base de datos
+      tags:
+        - Carts
+      responses:
+        "200":
+          description: El carrito fue creado satisfactoriamente de la base de datos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+  
+  /api/cart/{cid}:
+    get:
+      summary: Obtiene el carrito pasado por parametro en la ruta
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        description: id del carrito que devolvera la peticion
+        schema:
+          $type: String
+      responses:
+        "200":
+          description: El carrito se obtuvo satisfactoriamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+    put:
+      summary: Actualiza un carrito a partir de su id y los productos a añadir
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito que se desea actualizar.
+        schema:
+          $type: String
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/updateCart'
+      responses:
+        "200":
+          description: El producto fue actualizado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+    delete:
+      summary: Elimina todos los productos de un carrito a traves de su id
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito que se desea eliminar sus productos y vaciarlo.
+        schema:
+          $type: String
+      responses:
+        "200":
+          description: Los productos del carrito fueron eliminados exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+
+  /api/cart/{cid}/product/{pid}:
+    post:
+      summary: Añade un producto a un carrito
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito que se desea actualizar.
+        schema:
+          $type: String
+      - name: pid
+        in: path
+        required: true
+        description: id del producto que se desea añadir al carrito.
+        schema:
+          $type: String
+      responses:
+        "200":
+          description: El producto fue añadido exitosamente al carrito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+    put:
+      summary: Añade un producto a un carrito en una cantidad específica
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito que se desea actualizar.
+        schema:
+          $type: String
+      - name: pid
+        in: path
+        required: true
+        description: id del producto que se desea añadir al carrito.
+        schema:
+          $type: String
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/updateCartByOneProduct'
+      responses:
+        "200":
+          description: El producto fue añadido exitosamente al carrito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+    delete:
+      summary: Elimina un producto de un carrito a travez del id del producto y del carrito
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito al cual se desea eliminar un producto.
+        schema:
+          $type: String
+      - name: pid
+        in: path
+        required: true
+        description: id del producto que se desea eliminar del carrito.
+        schema:
+          $type: String
+      responses:
+        "200":
+          description: El producto del carrito fue eliminado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carts'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+
+  /api/cart/{cid}/purchase:
+    post:
+      summary: Finaliza el proceso de compra de un carrito y elimina los productos del carrito, restando tambien el stock inicial de los productos en la base de datos
+      tags:
+        - Carts
+      parameters:
+      - name: cid
+        in: path
+        required: true
+        description: id del carrito que se desea finalizar su proceso de compra.
+        schema:
+          $type: String
+      responses:
+        "200":
+          description: El proceso de compra ha sido finalizado correctamente y la orden de compra se ha generado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tickets'
+        "500":
+          description: Error interno del servidor, usualmente generado por una query defectuosa o un fallo de conexión con la base de datos
+    
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id: 
+          type: ObjectId
+          description: Id autogenerado de mongo
+        title:
+          type: String
+          description: Titulo del producto
+        description: 
+          type: String
+          description: Descripcion del producto
+        price: 
+          type: Number
+          description: Precio del producto
+        thumbnail:
+          type: String
+          format: binary
+          description: Archivo de imagen del producto
+        code:
+          type: String
+          description: Codigo de producto, es una propiedad única
+        stock:
+          type: Number
+          description: Stock disponible del producto
+        category:
+          type: String
+          description: Categoria del producto
+        status:
+          type: Boolean
+          description: Indica si el producto esta activo o no, pero es una propiedad que no esta funcionalmente activa
+        owner:
+          type: String
+          description: Email del usuario dueño del producto publicado
+          $ref: '#/components/schemas/Users/properties/email'
+      example:
+        _id: ObjectId("63njn34uionw9843439ewoiehwkj")
+        title: Caña de pescar
+        description: Caña de pescar de tres tramos marca Okuma
+        price: 70000
+        thumbnail: motorhome.jpeg
+        code: '#45421'
+        stock: 20
+        category: Cañas
+        status: true
+        owner: correomau@correo.com
+      required:
+        - title
+        - description
+        - price
+        - code
+        - stock
+        - category
+        - status
+        - owner
+    Users:
+      type: object
+      properties:
+        _id: 
+          type: ObjectId
+          description: Id autogenerado de mongo
+        first_name:
+          type: String
+          description: Nombre del usuario
+        last_name: 
+          type: String
+          description: Apellido del usuario
+        email: 
+          type: String
+          description: Correo del usuario, este campo es único
+        age: 
+          type: Number
+          description: Edad del usuario
+        password:
+          type: String
+          description: Contraseña hasheada del usuario
+        cart:
+          type: String
+          description: Carrito del usuario. Este campo esta referenciado con los ID del schema de carritos
+          $ref: '#/components/schemas/Carts/properties/_id'
+        role:
+          type: String
+          description: Rol del usuario, puede ser 'user', 'premium' o 'admin' y por defecto es 'user'
+      example:
+        _id: ObjectId("63njn34uionw9843439ewoiehwkj")
+        first_name: Mauricio
+        last_name: Espinosa
+        email: correomau@correo.com
+        age: 30
+        password: 293475rbhjneko32094820owijeur4932okewjrur5u849302owkdjfrui9843ow
+        cart: ObjectId('657114dae77ebe079b2c115a')
+        role: 'user'
+      required:
+        - first_name
+        - last_name
+        - email
+        - age
+        - password
+        - cart
+    Carts:
+      type: object
+      properties:
+        _id: 
+          type: ObjectId
+          description: Id autogenerado de mongo
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              product:
+                type: ObjectId
+                description: Id del producto que pertenece al carrito
+                $ref: '#/components/schemas/Products/properties/_id'
+              quantity:
+                type: Number
+                description: Cantidad de veces que esta añadido el producto al carrito
+      example:
+        products:
+          - product:
+              _id: ObjectId("63njn34uionw9843439ewoiehwkj")
+            quantity: 2
+    Tickets:
+      type: object
+      properties:
+        _id: 
+          type: ObjectId
+          description: Id autogenerado de mongo
+        code:
+          type: String
+          description: Codigo del ticket de compra, es una propiedad única
+        purchase_datetime: 
+          type: Date
+          description: Fecha y hora de la compra realizada
+        amount: 
+          type: Number
+          description: Monto total del ticket de compra
+        purchaser: 
+          type: String
+          description: Email del usuario que realizo la compra
+      example:
+        _id: ObjectId("63njn34uionw9843439ewoiehwkj")
+        code: 4f7e42da-be30-4bc9-be64-cd7800f4e67e
+        purchase_datetime: Sun Jan 21 2024 20:59:23 GMT-0300 (Argentina Standard Time)
+        amount: 333
+        purchaser: correomau@correo.com
+      required:
+        - code
+        - amount
+        - purchaser
+  securitySchemas:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  requestBodies:
+    updateCart:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              product: 
+                type: ObjectId
+                description: Id del producto a añadir al carrito
+              quantity: 
+                type: Number
+                description: cantidad del producto a añadir al carrito
+      example:
+        products: [
+          {
+            product: 65ad8c5d31999d7d7489f094,
+            quantity: 5
+          }
+        ]
+    updateCartByOneProduct:
+      type: object
+      properties:
+        quantity:
+          type: Number
+          description: Cantidad en la cual se quiere dejar el producto en el carrito
+      example:
+        quantity: 10

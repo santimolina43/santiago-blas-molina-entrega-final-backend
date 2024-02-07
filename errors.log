@@ -1,0 +1,371 @@
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: ERROR: Error: listen EADDRINUSE: address already in use :::8080
+error: Ocurrió un error: No se pudo completar la solicitud. {"stack":"Error: No se pudo completar la solicitud.\n    at file:///Users/santimolina/Desktop/Curso%20Backend/Entregas/desafio-clase-39/src/controllers/product.controller.js:30:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+error: Ocurrió un error: No se pudo completar la solicitud. {"stack":"Error: No se pudo completar la solicitud.\n    at file:///Users/santimolina/Desktop/Curso%20Backend/Entregas/desafio-clase-39/src/controllers/product.controller.js:30:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+error: Ocurrió un error: No se pudo completar la solicitud. {"stack":"Error: No se pudo completar la solicitud.\n    at file:///Users/santimolina/Desktop/Curso%20Backend/Entregas/desafio-clase-39/src/controllers/user.controller.js:47:31\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: router.js - applyCallbacks - TypeError: Cannot read properties of undefined (reading 'filename')
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65ad8c5d31999d7d7489f09
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65ad8c5d31999d7d7489f09
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65ad8c5d31999d7d7489f09
+error: product.controller.js - No es posible actualizar un producto del cual no eres owner
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = sss
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = sss
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = sss
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65ad4d5cc8b50e21a1d0d11e
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65ad4d5cc8b50e21a1d0d11e
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65ad4d5cc8b50e21a1d0d11e
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: cart.service.js - Error en getCartByID: CustomError: No se encontró ningun carrito con el id: 65aaa59d0f1fad1e5543a238
+error: cart.controller.js - Error en updateCartById: CustomError: cart.service.js - Error en getCartByID: CustomError: No se encontró ningun carrito con el id: 65aaa59d0f1fad1e5543a238
+error: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.controller.js - Error en deleteAllProductsFromCartById: CustomError: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.controller.js - Error en deleteAllProductsFromCartById: CustomError: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.controller.js - Error en deleteAllProductsFromCartById: CustomError: cart.service.js - Error en deleteAllProductsFromCartById: CastError: Cast to ObjectId failed for value "{cid}" (type string) at path "_id" for model "carts"
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: undefined
+error: undefined
+error: ERROR: Error: listen EADDRINUSE: address already in use :::8080
+error: undefined
+error: undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = _id
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en registerCallback: ReferenceError: emailValue is not defined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = _id
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en registerCallback: ReferenceError: emailValue is not defined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = _id
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en registerCallback: CustomError: Error al buscar el usuario a con id: _id
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b3fbdcf13f449f64c41979
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en registerCallback: CustomError: Error al buscar el usuario a con id: 65b3fbdcf13f449f64c41979
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b3fd07f13f449f64c41980
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en registerCallback: CustomError: Error al buscar el usuario a con id: 65b3fd07f13f449f64c41980
+error: session.controller.js - Error en registerCallback: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: session.controller.js - Error en deleteUser: TypeError: Cannot read properties of undefined (reading '_id')
+error: user.service.js - Error en deleteUser: TypeError: this.getusers is not a function
+error: session.controller.js - Error en deleteUser: CustomError: TypeError: this.getusers is not a function
+error: user.service.js - Error en deleteUser: CustomError: No existe ningun user con ese id
+error: session.controller.js - Error en deleteUser: CustomError: CustomError: No existe ningun user con ese id
+error: user.service.js - Error en deleteUser: CustomError: No existe ningun user con ese id
+error: session.controller.js - Error en deleteUser: CustomError: CustomError: No existe ningun user con ese id
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b40ef74f2daecab585d56b
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b40ef74f2daecab585d56b
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b40f5daae2b4979e651eee
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b40f5daae2b4979e651eee
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b40f94e62bd00246271465
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b40f94e62bd00246271465
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b40faee1431cc05a660cf9
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b40faee1431cc05a660cf9
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b410f73aa897dc8080a12d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b410f73aa897dc8080a12d
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b4114fdc4c8bb5df7fdce5
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b4114fdc4c8bb5df7fdce5
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b4117cf81234db06e04939
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b4117cf81234db06e04939
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b411ab9e4091f4ae149f38
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b411ab9e4091f4ae149f38
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b411c31996e85ca7908973
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b411c31996e85ca7908973
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b411d5b608e862db593642
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b411d5b608e862db593642
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = current
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: current
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b415c06147542699c36f24
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b415c06147542699c36f24
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b416b386d9f4161db5b8f3
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b416b386d9f4161db5b8f3
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b417417ccff101d81c821e
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b417417ccff101d81c821e
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b417b3c86d8c0a2faed96d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b417b3c86d8c0a2faed96d
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = undefined
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = undefined
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: undefined
+error: user.service.js - Error en deleteUser: CustomError: No existe ningun user con ese id
+error: session.controller.js - Error en deleteUser: CustomError: CustomError: No existe ningun user con ese id
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = undefined
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: undefined
+error: user.service.js - Error en deleteUser: CustomError: No existe ningun user con ese id
+error: session.controller.js - Error en deleteUser: CustomError: CustomError: No existe ningun user con ese id
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = undefined
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b4199ab36b534e8848fdec
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b4199ab36b534e8848fdec
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b41eed733b3a6d91f599ca
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b41eed733b3a6d91f599ca
+error: session.controller.js - Error en deleteUser: TypeError: req.user.role.roUpperCase is not a function
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b41fbe77650f913087a6e7
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b41fbe77650f913087a6e7
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b41fc577650f913087a6f3
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b41fc577650f913087a6f3
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b41ffc87c664d67f5dc3a6
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b41ffc87c664d67f5dc3a6
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b42036246de623ab480002
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b42036246de623ab480002
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b420dec2f1c6d86ff8812d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b420dec2f1c6d86ff8812d
+error: session.controller.js - Error en getUser: TypeError: req.user.role.roUpperCase is not a function
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b4219cede0f33907b7726d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b4219cede0f33907b7726d
+error: ERROR: Error: listen EADDRINUSE: address already in use :::8080
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b423ccf5d12a73f90e9a28
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b423ccf5d12a73f90e9a28
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b432f634b219e374ef6e05
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b432f634b219e374ef6e05
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b4382896c2109ef5d3e0b6
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b4382896c2109ef5d3e0b6
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b4382896c2109ef5d3e0b6
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43844d69f1d5175f63e9d
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43844d69f1d5175f63e9d
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43844d69f1d5175f63e9d
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43860aa7cc97e3427f98e
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43860aa7cc97e3427f98e
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43860aa7cc97e3427f98e
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b438974310a04552c711d5
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b438974310a04552c711d5
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b438974310a04552c711d5
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43bbc32cf976b2534f806
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43bbc32cf976b2534f806
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43bbc32cf976b2534f806
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43bf2cedb944fdc11c10f
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43bf2cedb944fdc11c10f
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43bf2cedb944fdc11c10f
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43c8f99c9fdeb722f1f32
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43c8f99c9fdeb722f1f32
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43c8f99c9fdeb722f1f32
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43cf8350dce17449cdd97
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43cf8350dce17449cdd97
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43cf8350dce17449cdd97
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43e3a74bba153e3e6a7ee
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e3a74bba153e3e6a7ee
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e3a74bba153e3e6a7ee
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43e6db580585d8defdadc
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e6db580585d8defdadc
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e6db580585d8defdadc
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43e9d8ef1aa79643dc528
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e9d8ef1aa79643dc528
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43e9d8ef1aa79643dc528
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b43f204dc4bea76ee16c5d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b43f204dc4bea76ee16c5d
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43f214dc4bea76ee16c65
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f214dc4bea76ee16c65
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f214dc4bea76ee16c65
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b43f365473978be2d19162
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b43f365473978be2d19162
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43f385473978be2d1916c
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f385473978be2d1916c
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f385473978be2d1916c
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b43f5820be1ed63486931d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b43f5820be1ed63486931d
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43f5920be1ed634869325
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f5920be1ed634869325
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f5920be1ed634869325
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b43f6c77206f1b13f3bfa3
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b43f6c77206f1b13f3bfa3
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b43f6e77206f1b13f3bfab
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f6e77206f1b13f3bfab
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b43f6e77206f1b13f3bfab
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - No es posible agregar un producto a tu carrito del cual eres owner
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b585010595d467a0b55846
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b585010595d467a0b55846
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b585020595d467a0b5584e
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b585020595d467a0b5584e
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b585020595d467a0b5584e
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b58547791605393d50445b
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b58547791605393d50445b
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b58548791605393d504463
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b58548791605393d504463
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b58548791605393d504463
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65b586d52ce10e8e7b8d13ef
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: session.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65b586d52ce10e8e7b8d13ef
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65b586d62ce10e8e7b8d13f7
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65b586d62ce10e8e7b8d13f7
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65b586d62ce10e8e7b8d13f7
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net
+error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net
+error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net
+error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"photo","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"photo","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"thumbnail","name":"MulterError","storageErrors":[]}
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"documents","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"identificationDocument","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"addressDocument","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"identification","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"identification","name":"MulterError","storageErrors":[]}
+error: Unexpected field {"code":"LIMIT_UNEXPECTED_FILE","field":"identification","name":"MulterError","storageErrors":[]}
+error: ERROR: Error: listen EADDRINUSE: address already in use :::8080
+error: user.service.js - Error en uploadUserDocuments: MongoServerError: The argument to $each in $push must be an array but it was of type: object
+error: user.controller.js - Error en postUserDocument: CustomError: Error al querer actualizar el usuario.
+error: user.service.js - Error en uploadUserDocuments: MongoServerError: The argument to $each in $push must be an array but it was of type: object
+error: user.controller.js - Error en postUserDocument: CustomError: Error al querer actualizar el usuario.
+error: user.service.js - Error en uploadUserDocuments: MongoServerError: The argument to $each in $push must be an array but it was of type: object
+error: user.controller.js - Error en postUserDocument: CustomError: Error al querer actualizar el usuario.
+error: user.controller.js - Error en postUserDocument: ReferenceError: userUpdated is not defined
+error: user.controller.js - Error en postUserDocument: ReferenceError: error is not defined
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el comprobante de domicilio. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: Ya has cargado el documento de identificacion. No puedes volver a cargarlo
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: user.controller.js - Error en postUserDocument: Ya has cargado el comprobante de domicilio. No puedes volver a cargarlo
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con email = santiagoblasmolina@gmail.com2
+error: user.service.js - Error en getUserByEmail: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUsersProfileView: CustomError: Error al buscar el usuario a con email: santiagoblasmolina@gmail.com2
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con email = santiagoblasmolina@gmail.com
+error: user.service.js - Error en getUserByEmail: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUsersCartView: CustomError: Error al buscar el usuario a con email: santiagoblasmolina@gmail.com
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con email = santiagoblasmolina@gmail.com
+error: user.service.js - Error en getUserByEmail: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUsersCartView: CustomError: Error al buscar el usuario a con email: santiagoblasmolina@gmail.com
+error: router.js - applyCallbacks - ReferenceError: error is not defined
+error: router.js - applyCallbacks - ReferenceError: error is not defined
+error: user.service.js - Error en updateUserLastConnection: CastError: Cast to date failed for value "[Function: now]" (type function) at path "last_connection"
+error: user.controller.js - Error en login: CustomError: Error al updatear el usuario: CastError: Cast to date failed for value "[Function: now]" (type function) at path "last_connection"
+error: undefined
+error: undefined
+error: router.js - applyCallbacks - ReferenceError: error is not defined
+error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net

@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <h6 class="h6" >
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Volver al inicio
+        </a>
+    </h6>
+    <h1 class="display-4">Detalles del Ticket de Compra</h1>
+    <ul class="list-group mt-4">
+        <li class="list-group-item"><strong>Código:</strong> {{code}}</li>
+        <li class="list-group-item"><strong>Fecha de Compra:</strong> {{purchase_datetime}}</li>
+        <li class="list-group-item"><strong>Monto Total:</strong> ${{amount}}</li>
+        <li class="list-group-item"><strong>Comprador:</strong> {{purchaser}}</li>
+    </ul>
+</div>

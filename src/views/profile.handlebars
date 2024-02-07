@@ -1,0 +1,89 @@
+
+<div class="container my-5 general-container">
+    <h6 class="h6" >
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Volver al inicio
+        </a>
+    </h6>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <h1 class="h1">Mi perfil</h1>
+        <a class="btn btn-danger" href="http://localhost:8080/api/user/logout">Logout</a>
+    </div>
+    <hr/>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    {{#if (isUserOrUserPremium role)}}
+                        <img src="http://localhost:8080{{returnProfilePhotoUrl documents}}" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
+                    {{else}}
+                        <img src="http://localhost:8080/imgs/profiles/pngwing.com.png" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
+                    {{/if}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{first_name}}</h5>
+                        <p class="card-text">Correo electrónico: {{email}}</p>
+                        <p class="card-text">Edad: {{age}} años</p>
+                        {{!-- <a href="#" class="btn btn-primary">Editar Perfil</a> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                {{!-- <h2>Mis Pedidos</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div>
+                            <strong>Número de Pedido:</strong> 12345
+                            <br>
+                            <strong>Fecha de Pedido:</strong> 2023-09-15
+                            <br>
+                            <strong>Estado del Pedido:</strong> En proceso
+                        </div>
+                        <a href="#" class="btn btn-success float-right">Ver Detalles</a>
+                    </li>
+                    <!-- Puedes repetir estos elementos para mostrar más pedidos -->
+                </ul> --}}
+                <div class="col-md-8" style="width: auto;">
+                    <h2>Mis Documentos</h2>
+                        {{#if (isUserOrUserPremium role)}}
+                            <form id="documentForm" method="POST" action="/api/user/{{_id}}/documents" enctype="multipart/form-data" data-user-id="{{_id}}">
+                                <div class="mb-3">
+                                    <label for="identification" class="form-label">Identificación</label>
+                                    {{#if (hasIdentificationDoc documents)}}
+                                        <span style="color: green;"> - ✔ Documentación cargada</span>
+                                    {{else}}
+                                        <input type="file" class="form-control" id="identification" name="identification" accept=".pdf, .jpg, .jpeg, .png" data-type="identification">
+                                    {{/if}}
+                                </div>
+                                <div class="mb-3">
+                                    <label for="proofOfAddress" class="form-label">Comprobante de domicilio</label>
+                                    {{#if (hasProofOfAddressDoc documents)}}
+                                        <span style="color: green;"> - ✔ Documentación cargada</span>
+                                    {{else}}
+                                        <input type="file" class="form-control" id="proofOfAddress" name="proofOfAddress" accept=".pdf, .jpg, .jpeg, .png" data-type="proofOfAddress">
+                                    {{/if}}
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bankStatement" class="form-label">Comprobante de estado de cuenta</label>
+                                    {{#if (hasBankStatementDoc documents)}}
+                                        <span style="color: green;"> - ✔ Documentación cargada</span>
+                                    {{else}}
+                                        <input type="file" class="form-control" id="bankStatement" name="bankStatement" accept=".pdf, .jpg, .jpeg, .png" data-type="bankStatement">
+                                    {{/if}}
+                                </div>
+                                <button type="submit" class="btn btn-primary">Subir Documentos</button>
+                            </form>
+                        {{else}}
+                            <p>El admin no debe cargar documentación</p>
+                        {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- cdn de sweetalert2 --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/profile.js"></script>

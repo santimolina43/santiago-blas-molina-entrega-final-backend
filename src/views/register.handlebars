@@ -1,0 +1,63 @@
+<div class="container my-5 general-container">
+    <h6 class="h6" >
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Volver al inicio de sesion
+        </a>
+    </h6>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <h1 class="h1">Registrarme</h1>
+    </div>
+    <hr/>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Registro de Usuario</div>
+                    <div class="card-body">
+                        <form id="registerForm" method="POST" action="/api/user/register" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="first_name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="last_name" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="age" name="age" required>
+                            </div>
+                            <div class="row mb-3">
+                                <p>Foto de perfil (opcional):</p>
+                                <label for="thumbnail" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" id="thumbnail" name="thumbnail">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrarme</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- cdn de sweetalert2 --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/register.js"></script>

@@ -1,0 +1,20 @@
+body {
+    /* Asegúrate de que el cuerpo tenga suficiente espacio para que puedas desplazarte */
+    margin-bottom: 50px; /* Altura del botón de chat */
+}
+
+.fixed-bottom-fix{
+    width:fit-content;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 10px; /* Puedes ajustar esto según tu preferencia */
+    right: 10px; /* Puedes ajustar esto según tu preferencia */
+    padding: 10px;
+    background-color: #007bff; /* Puedes cambiar el color según tu preferencia */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

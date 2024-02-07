@@ -1,0 +1,11 @@
+const EErros = {
+    ROUTING_ERROR: 1,
+    INVALID_TYPES_ERROR: 2,
+    DATABASES_ERROR: 3,
+    UNIQUE_KEY_VIOLATED: 4,
+    MISSING_FIELDS_ERROR: 5,
+    DATA_NOT_FOUND_ERROR: 6,
+    UNAUTHORIZED: 7
+}
+
+export default EErros

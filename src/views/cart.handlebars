@@ -1,0 +1,66 @@
+
+<div class="container my-5 general-container">
+    <h6 class="h6" >
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Volver al inicio
+        </a>
+    </h6>
+    <h1 class="h1">Carrito</h1>
+    <hr/>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            {{#each cart.products}}
+            <tr>
+            <td>
+                <img src="{{this.product.thumbnail}}" alt="{{this.product.title}}" class="img-thumbnail" width="100">
+            </td>
+            <td>
+                <h5>{{this.product.title}}</h5>
+                <p>{{this.product.description}}</p>
+            </td>
+            <td>${{this.product.price}}</td>
+            <td>
+                <div class="input-group">
+                {{#if (restProduct this.product.stock this.quantity)}} 
+                    <button class="btn btn-outline-secondary" type="button" onclick="restProductFromCart('{{../cart._id}}','{{this.product._id}}')">-</button>
+                {{/if}}
+                <input type="text" class="form-control" value="{{this.quantity}}" readonly>
+                {{#if (addProduct this.product.stock this.quantity)}} 
+                    <button class="btn btn-outline-secondary" type="button" onclick="addProductToCart('{{../cart._id}}','{{this.product._id}}')">+</button>
+                {{/if}}
+                </div>
+            </td>
+            <td>${{subTotal this.quantity this.product.price}}</td>
+            <td>
+                <button class="btn btn-danger" onclick="deleteProductFromCart('{{../cart._id}}','{{this.product._id}}')">Eliminar</button>
+            </td>
+            </tr>
+            {{/each}}
+        </tbody>
+        </table>
+    </div>
+    <div class="text-end">
+        <p>Total: ${{#if cart.products}}{{calculateTotal cart.products}}{{else}}0{{/if}}</p> 
+        <button class="btn btn-primary" onclick="finishPurchase('{{cart._id}}')">Finalizar compra</button>
+    </div>
+    <hr/>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{!-- <script src="/js/home.js"></script> --}}
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/cart.js"></script>

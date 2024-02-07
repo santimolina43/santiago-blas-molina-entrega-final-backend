@@ -1,0 +1,61 @@
+
+
+<div class="container my-5 general-container">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <h6 class="h6" >Bienvenido <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/user/profile">{{first_name}}</a></h6>
+        <a class="btn btn-danger" href="http://localhost:8080/api/user/logout">Logout</a>
+    </div>
+    {{#if (isAdminOrUserPremium role)}}
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/realTimeProducts/">Administrate Products</a>   
+    {{/if}}
+    {{#if (isUserOrUserPremium role)}}
+        <div>
+            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/cart/">Carrito</a>
+        </div>   
+    {{/if}}   
+    <div style="display: flex; flexdirection: row">
+        <h6>Role: "{{role}}" - </h6>
+        {{#if (isUserOrUserPremium role)}}
+        <h6 style="color:blue;" type="button" onClick="changeUserRole('{{id}}')">Change role</h6>
+        {{/if}}
+    </div>
+    <h1 class="h1">Todos los productos</h1>
+    <hr/>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{#each products.payload}}
+                <div class="col">
+                <div class="card">
+                    <img src="{{thumbnail}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{description}}</p>
+                        <h6 class="card-text">Precio: ${{price}}</h6> 
+                        <h6 class="card-text">Stock: {{stock}}</h6> 
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <button class="btn btn-dark small" onclick="addProductToCart('{{../cart}}','{{_id}}')">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <hr/>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {{#if products.prevLink}}<li class="page-item"><a class="page-link" href={{products.prevLink}}>Previous</a></li>{{/if}}
+            {{#if products.prevLink}}<li class="page-item"><a class="page-link" href={{products.prevLink}}>{{products.prevPage}}</a></li>{{/if}}
+            <li class="page-item"><a class="page-link" href="#">{{products.page}}</a></li>
+            {{#if products.nextLink}}<li class="page-item"><a class="page-link" href={{products.nextLink}}>{{products.nextPage}}</a></li>{{/if}}
+            {{#if products.nextLink}}<li class="page-item"><a class="page-link" href={{products.nextLink}}>Next</a></li>{{/if}}
+        </ul>
+    </nav>
+
+    <!-- boton para acceder al chat -->
+    <div class="fixed-bottom mb-4 mr-4 float-end fixed-bottom-fix">
+        <a type="button" class="chat-button btn btn-primary float-end me-5 mb-5" href="http://localhost:8080/chat">
+            Chat
+        </a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/home.js"></script>
