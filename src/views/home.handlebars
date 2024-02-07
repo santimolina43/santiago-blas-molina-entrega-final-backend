@@ -2,15 +2,15 @@
 
 <div class="container my-5 general-container">
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <h6 class="h6" >Bienvenido <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/user/profile">{{first_name}}</a></h6>
-        <a class="btn btn-danger" href="http://localhost:8080/api/user/logout">Logout</a>
+        <h6 class="h6" >Bienvenido <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/user/profile">{{first_name}}</a></h6>
+        <a class="btn btn-danger" href="https://web-production-59fe.up.railway.app/api/user/logout">Logout</a>
     </div>
     {{#if (isAdminOrUserPremium role)}}
-        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/realTimeProducts/">Administrate Products</a>   
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/realTimeProducts/">Administrate Products</a>   
     {{/if}}
     {{#if (isUserOrUserPremium role)}}
         <div>
-            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/cart/">Carrito</a>
+            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/cart/">Carrito</a>
         </div>   
     {{/if}}   
     <div style="display: flex; flexdirection: row">
@@ -51,7 +51,7 @@
 
     <!-- boton para acceder al chat -->
     <div class="fixed-bottom mb-4 mr-4 float-end fixed-bottom-fix">
-        <a type="button" class="chat-button btn btn-primary float-end me-5 mb-5" href="http://localhost:8080/chat">
+        <a type="button" class="chat-button btn btn-primary float-end me-5 mb-5" href="https://web-production-59fe.up.railway.app/chat">
             Chat
         </a>
     </div>

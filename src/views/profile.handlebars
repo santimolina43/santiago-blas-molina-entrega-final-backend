@@ -1,7 +1,7 @@
 
 <div class="container my-5 general-container">
     <h6 class="h6" >
-        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
             </svg>
@@ -10,7 +10,7 @@
     </h6>
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
         <h1 class="h1">Mi perfil</h1>
-        <a class="btn btn-danger" href="http://localhost:8080/api/user/logout">Logout</a>
+        <a class="btn btn-danger" href="https://web-production-59fe.up.railway.app/api/user/logout">Logout</a>
     </div>
     <hr/>
     <div class="container mt-5">
@@ -18,9 +18,9 @@
             <div class="col-md-4">
                 <div class="card">
                     {{#if (isUserOrUserPremium role)}}
-                        <img src="http://localhost:8080{{returnProfilePhotoUrl documents}}" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
+                        <img src="https://web-production-59fe.up.railway.app{{returnProfilePhotoUrl documents}}" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
                     {{else}}
-                        <img src="http://localhost:8080/imgs/profiles/pngwing.com.png" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
+                        <img src="https://web-production-59fe.up.railway.app/imgs/profiles/pngwing.com.png" alt="Imagen de perfil" class="card-img-top" style="padding: 10px;">
                     {{/if}}
                     <div class="card-body">
                         <h5 class="card-title">{{first_name}}</h5>
