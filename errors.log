@@ -521,3 +521,8 @@ error: product.service.js - Error en getProductByID: CustomError: CustomError: N
 error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65c52d372cdbe1b43d1ea8fe
 error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52d382cdbe1b43d1ea904
 error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: product.service.js - Error en addProduct: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en addNewProduct: CustomError: CustomError: Codigo de producto ya existente
+error: product.controller.js - Error en deleteProductById: TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+error: product.controller.js - Error en deleteProductById: ReferenceError: sendDeletedProductEmail is not defined
+error: product.controller.js - No es posible eliminar un producto del cual no eres owner

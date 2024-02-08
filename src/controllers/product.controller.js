@@ -3,9 +3,12 @@ import { logger } from '../app.js';
 import { env_parameters_obj } from '../config/env.config.js';
 import CartService from '../services/cart.service.js';
 import ProductService from '../services/product.service.js'
+import UserService from '../services/user.service.js';
+import { sendDeletedProductEmail } from '../utils/deletedProductEmail.js';
 
 const productService = new ProductService()
 const cartService = new CartService()
+const userService = new UserService()
 
 /************************************/   
 /************** VISTAS **************/   
@@ -157,6 +160,12 @@ export const deleteProductById = async (req, res) => {
         const productDeletedMsg = await productService.deleteProduct(id)
         await cartService.deleteProductFromAllCarts(id)
         req.logger.info('product.controller.js - deleteProductById - Se elimino el producto correctamente')
+        req.logger.info('product.controller.js - deleteProductById - Obtengo el usuario owner')
+        const ownerUser = await userService.getUserByEmail(productToDelete.owner)
+        if (ownerUser.role.toUpperCase() === "PREMIUM") {
+            req.logger.info('product.controller.js - deleteProductById - Envio email al dueño del producto para notificar que se eliminó')
+            await sendDeletedProductEmail(productToDelete)
+        }
         res.status(200).json({status: 'success', payload: productDeletedMsg})
     } catch (error) {
         req.logger.error('product.controller.js - Error en deleteProductById: '+error)
