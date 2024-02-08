@@ -5,8 +5,11 @@ import { env_parameters_obj } from '../config/env.config.js';
 import UserPasswordService from '../services/userPassword.service.js';
 import { sendResetPasswordEmail } from '../utils/resetPasswordEmail.js';
 import { generateToken, isValidPassword } from '../middlewares/auth-helpers.js'
+import CartService from '../services/cart.service.js';
+import { sendDeletedUserNotificacionEmail } from '../utils/sendDeletedUserNotificationEmail.js';
 
 const userService = new UserService()
+const cartService = new CartService()
 const userPasswordService = new UserPasswordService()
 
 /************************************/   
@@ -231,6 +234,55 @@ export const postUserDocument = async (req, res) => {
     }
 };
 
+export const getUsers = async (req, res) => {
+    try {
+        logger.info('user.controller.js - getUsers - Start')
+        const users = await userService.getUsers()
+        if (!users) return res.status(401).json({ status: "error", payload: "error al buscar los usuarios" })
+        const usersResponse = users.map(user => (
+            {
+                name: user.name,
+                last_name: user.last_name,
+                email: user.email,
+                role: user.role
+            }
+        ))
+        return res.status(200).json({ status: "success", payload: usersResponse })
+    } catch (error) {
+        logger.error('user.controller.js - Error en getUsers: '+error)
+        return res.status(401).json({ status:"error", error: error})
+    }
+}
+
+export const deleteInactiveUsers = async (req, res) => {
+    try {
+        logger.info('user.controller.js - deleteInactiveUsers - Start')
+        // Busco los usuarios que hayan estado inactivos por mas de dos dias
+        logger.info('user.controller.js - deleteInactiveUsers - busco usuarios inactivos')
+        const users = await userService.getInactiveUsers(2)
+        if (!users) return res.status(401).json({ status: "error", payload: "error al buscar los usuarios inactivos" })
+        let counter = 0;
+        // Recorro el array de usuarios inactivos
+        logger.info('user.controller.js - deleteInactiveUsers - recorro array de usuarios inactivos')
+        // Utilizo un bucle for...of para garantizar que las funciones asíncronas se completen en orden
+        for (const user of users) {
+            // Elimino de la base de datos el carrito de los usuarios inactivos
+            logger.info('user.controller.js - deleteInactiveUsers - elimino carrito del usuario inactivo')
+            await cartService.deleteCartById(user.cart);
+            // Elimino al usuario inactivo de la base de datos
+            logger.info('user.controller.js - deleteInactiveUsers - elimino al usuario inactivo')
+            await userService.deleteUser(user._id);
+            // Envio un email al usuario para notificarlo
+            logger.info('user.controller.js - deleteInactiveUsers - envio email de notificacion')
+            await sendDeletedUserNotificacionEmail(user.email)
+            counter = counter + 1;
+        }
+        return await res.status(200).json({ status: "success", payload: `${counter} usuarios inactivos fueron eliminados` })
+    } catch (error) {
+        logger.error('user.controller.js - Error en deleteInactiveUsers: '+error)
+        return res.status(401).json({ status:"error", error: error})
+    }
+}
 
 /************************************/   
 /************** VISTAS **************/   

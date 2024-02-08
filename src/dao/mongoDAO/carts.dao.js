@@ -55,4 +55,10 @@ export default class CartsDAODB {
                                                 {$set: {'products': []}})
         return result
     }
+
+    deleteOne = async(cartID) => {
+        let result = await this.model.deleteOne({_id: cartID})
+        return result
+    }
+
 }

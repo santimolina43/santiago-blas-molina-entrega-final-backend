@@ -39,6 +39,28 @@ class UserService {
         }
         return this.#_users
     }   
+
+    /********* GET INACTIVE USERS *********/    
+    async getInactiveUsers(inactiveDays) {
+        // Leo la base de datos y retorno los useros
+        try {
+            // Calculo la fecha actual reducida en el tiempo pasado por parametro
+            const inactiveLimitDate = new Date();
+            inactiveLimitDate.setDate(inactiveLimitDate.getDate() - inactiveDays);
+            // Busco los usuarios que cumplan con la condicion de last_connection excedida
+            const todoslosusers = await this.usersDAO.find()
+            let usuariosInactivos = []
+            todoslosusers.forEach((user) => {
+                if (user.last_connection <= inactiveLimitDate) {
+                    usuariosInactivos.push(user)
+                }
+            });            
+            return usuariosInactivos
+        } catch (error) {
+            logger.error('user.service.js - Error en getUsers: '+error)
+            throw new CustomError('Error al buscar los users en la base de datos:'+error, EErros.DATA_NOT_FOUND_ERROR)
+        }
+    }   
     
     
     /********* GET USER BY CART ID *********/
@@ -169,26 +191,19 @@ class UserService {
     /********* DELETE USER *********/
     async deleteUser(id) {
         try {
-            // Obtengo el array de users desde el archivo
-            await this.getUsers()
-            // Recorro el array de users y modifico los solicitados
-            let isFound = false
-            this.#_users.forEach(item => {
-                if (item._id == id) {
-                    isFound = true
-                }
-            })
-            if (!isFound) throw new CustomError('No existe ningun user con ese id', EErros.DATA_NOT_FOUND_ERROR) 
+            logger.info('user.service.js - deleteUser - start')
             // Elimino el user
+            logger.info('user.service.js - deleteUser - elimino al usuario')
             await this.usersDAO.deleteOne(id)
-            // Obtengo el nuevo array de users desde la base de datos
-            const users = await this.getUsers()
-            const userFound = users.find(item => item._id == id)
-            // Busco el user a traves de la propiedad en el array
-            if (userFound) {
-                throw new CustomError('Error al eliminar el usuario')
-            } else {
-                return 'Usuario eliminado correctamente'
+            try {
+                // Busco el user nuevamente a traves del id
+                const userFoundAgain = await this.getUserByIDToBack(id)
+                if (userFoundAgain) {
+                    logger.error('user.service.js - deleteUser - error al eliminar el usuario')
+                    throw new CustomError('Error al eliminar el usuario')
+                }
+            } catch (err) {
+                if (err.code = 6) logger.info('user.service.js - deleteUser - usuario eliminado sin errores')
             }
         } catch (error) {
             logger.error('user.service.js - Error en deleteUser: '+error)
@@ -200,8 +215,10 @@ class UserService {
     async getUserByField(propiedad, valor) {
         // Obtengo el array de useros desde el archivo
         try {
-            const users = await this.getUsers()
-            const userFound = users.find(item => item[propiedad] == valor)
+            // const users = await this.getUsers()
+            // const userFound = users.find(item => item[propiedad] == valor)
+            // Utilizo el método findOne de Mongoose para buscar un usuario por la propiedad y valor
+            const userFound = await this.usersDAO.findOne({ [propiedad]: valor });
             // Busco el user a traves de la propiedad en el array
             if (userFound) {
                 return userFound

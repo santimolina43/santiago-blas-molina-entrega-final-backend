@@ -1,5 +1,5 @@
 import RouterClass from '../router.js';
-import { login, githubCallback, logout, registerCallback, resetPassword, resetPasswordFinalStep, changeUserRole, deleteUser, getUser, current, postUserDocument } from '../../controllers/user.controller.js';
+import { login, githubCallback, logout, registerCallback, resetPassword, resetPasswordFinalStep, changeUserRole, deleteUser, getUser, current, postUserDocument, getUsers, deleteInactiveUsers } from '../../controllers/user.controller.js';
 import { uploaderDocument } from '../../middlewares/multer-uploader.js';
 
 // Users Router
@@ -43,6 +43,12 @@ export default class UsersRouter extends RouterClass {
         
         /********* POST USER DOCUMENT *********/    
         this.post('/:uid/documents', ["USER", "ADMIN", "PREMIUM"], 'next', {}, uploaderDocument, postUserDocument)
+        
+        /********* GET ALL USERS *********/    
+        this.get('/', ["PUBLIC"], 'next', {}, getUsers)
+        
+        /********* DELETE ALL INACTIVE USERS *********/    
+        this.delete('/', ["PUBLIC"], 'next', {}, deleteInactiveUsers)
 
     }
 }

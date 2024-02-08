@@ -188,6 +188,33 @@ class CartService {
         }
         return 'product deleted successfully'
     }
+     
+    /********* DELETE CART BY ID *********/
+    async deleteCartById(id) {
+        try {
+            logger.info('cart.service.js - deleteCartById - start')
+            // Busco el carrito en la base de datos
+            logger.info('cart.service.js - deleteCartById - busco el carrito')
+            const isFound = await this.cartsDAO.findOne(id)
+            if (!isFound) throw new CustomError('No existe ningun carrito con el id: '+id, EErros.DATA_NOT_FOUND_ERROR) 
+            // Elimino el carrito
+            logger.info('cart.service.js - deleteCartById - elimino el carrito')
+            await this.cartsDAO.deleteOne(id)
+            // Busco nuevamente el carrito en la base de datos
+            const isFoundAgain = await this.cartsDAO.findOne(id)
+            // Busco el user a traves de la propiedad en el array
+            if (isFoundAgain) {
+                logger.error('cart.service.js - deleteCartById - el carrito no fue eliminado')
+                throw new CustomError('Error al eliminar el carrito')
+            } else {
+                logger.info('cart.service.js - deleteCartById - carrito eliminado correctamente')
+                return 'Carrito eliminado correctamente'
+            }
+        } catch (error) {
+            logger.error('cart.service.js - Error en deleteCartById: '+error)
+            throw new CustomError(error)
+        }
+    }       
 
 }
 

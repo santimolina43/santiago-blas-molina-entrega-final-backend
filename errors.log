@@ -369,3 +369,33 @@ error: undefined
 error: undefined
 error: router.js - applyCallbacks - ReferenceError: error is not defined
 error: querySrv ECONNREFUSED _mongodb._tcp.huapi.hudzda5.mongodb.net
+error: user.service.js - Error en getUsers: TypeError: undefined is not a function
+error: user.controller.js - Error en deleteInactiveUsers: CustomError: Error al buscar los users en la base de datos:TypeError: undefined is not a function
+error: user.service.js - Error en deleteUser: CustomError: No existe ningun user con ese id
+error: cart.service.js - Error en deleteCartById: CustomError: No existe ningun carrito con ese id
+error: cart.service.js - Error en deleteCartById: CustomError: No existe ningun carrito con el id: 65c06df054ed9e8cb77bf68d
+error: cart.service.js - Error en deleteCartById: CustomError: No existe ningun carrito con el id: 65c06db854ed9e8cb77bf67b
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c06db954ed9e8cb77bf67e
+error: cart.service.js - Error en deleteCartById: CustomError: No existe ningun carrito con el id: 65c05e53c3bc1f95ba639987
+error: cart.service.js - Error en deleteCartById: CustomError: No existe ningun carrito con el id: 65c05f983960ea72ab56d04f
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c06db954ed9e8cb77bf67e
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c06df154ed9e8cb77bf690
+error: user.service.js - Error en getUserByField: ReferenceError: UserModel is not defined
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c06db954ed9e8cb77bf67e") }" (type Object) at path "email" for model "users"
+error: undefined {"body":"{ \n  \"quantity\": 15\n  65c06db954ed9e8cb77bf67e\n  65c06db954ed9e8cb77bf67e\n}","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"}
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c06df154ed9e8cb77bf690") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c06db954ed9e8cb77bf67e") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c065bba0597ac179715c49") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c43f9030d09cd76b705b36") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c4125d30d09cd76b705b1c") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c441ca30d09cd76b705b49") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c440e430d09cd76b705b43") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c447be30d09cd76b705b64") }" (type Object) at path "email" for model "users"
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
