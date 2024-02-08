@@ -399,3 +399,125 @@ error: user.service.js - Error en getUserByField: CastError: Cast to string fail
 error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
 error: user.service.js - Error en getUserByField: CastError: Cast to string failed for value "{ _id: new ObjectId("65c447be30d09cd76b705b64") }" (type Object) at path "email" for model "users"
 error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en administrateUsers: ReferenceError: usuarios is not defined
+error: user.controller.js - Error en administrateUsers: ReferenceError: usuarios is not defined
+error: user.controller.js - Error en administrateUsers: ReferenceError: usuarios is not defined
+error: user.controller.js - Error en administrateUsers: ReferenceError: usuarios is not defined
+error: undefined
+error: undefined
+error: user.controller.js - Error en administrateUsers: ReferenceError: format is not defined
+error: user.controller.js - Error en administrateUsers: ReferenceError: format is not defined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c4440e30d09cd76b705b4f
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c51bfc7638c0db3e4a065e
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c51ca66b05b71a8367d473
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c5138a6aab943eedf578fc
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en changeUserRole: CustomError: Error al buscar el usuario a con id: 65c5138a6aab943eedf578fc
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c5216ff7e4d35151c96c9d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en postUserDocument: No se han cargado documentos para el usuario
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 55:39 {"column":39,"endColumn":41,"endLineNumber":55,"lineNumber":55,"name":"Error"}
+error: if doesn't match fi - 76:35 {"column":35,"endColumn":37,"endLineNumber":76,"lineNumber":76,"name":"Error"}
+error: if doesn't match fi - 76:35 {"column":35,"endColumn":37,"endLineNumber":76,"lineNumber":76,"name":"Error"}
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c529fbb3f956fc86335701
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c529fbb3f956fc86335701
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c529fbb3f956fc86335701
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c529feb3f956fc86335711
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52a90b3f956fc8633572e
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52a90b3f956fc8633572e
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52a90b3f956fc8633572e
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52a93b3f956fc8633573e
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52ad59915721e9c4081cc
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52ad59915721e9c4081cc
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52ad59915721e9c4081cc
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52ad89915721e9c4081dc
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b519915721e9c4081fd
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b519915721e9c4081fd
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52b519915721e9c4081fd
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller.js - Error en deleteProductById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = undefined
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = undefined
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b549915721e9c40820d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b8d29d721f3c5cc5f5a
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b8d29d721f3c5cc5f5a
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52b8d29d721f3c5cc5f5a
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65c52b9029d721f3c5cc5f67
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65c52b9029d721f3c5cc5f67
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65c52b9029d721f3c5cc5f67
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52b9129d721f3c5cc5f6d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52bbbe576c44cf7e3cfb8
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52bbbe576c44cf7e3cfb8
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52bbbe576c44cf7e3cfb8
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65c52bbee576c44cf7e3cfc5
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65c52bbee576c44cf7e3cfc5
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65c52bbee576c44cf7e3cfc5
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52bbfe576c44cf7e3cfcb
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52c73e4a1b23d07691d6d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52c73e4a1b23d07691d6d
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52c73e4a1b23d07691d6d
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65c52c75e4a1b23d07691d7a
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65c52c75e4a1b23d07691d7a
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65c52c75e4a1b23d07691d7a
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52c76e4a1b23d07691d80
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52d352cdbe1b43d1ea8f1
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52d352cdbe1b43d1ea8f1
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.
+error: user.controller.js - Error en getUser: CustomError: Error al buscar el usuario a con id: 65c52d352cdbe1b43d1ea8f1
+error: product.service.js - Error en getProductByField: CustomError: No se encontró ningun producto con _id = 65c52d372cdbe1b43d1ea8fe
+error: product.service.js - Error en getProductByID: CustomError: CustomError: No se encontró ningun producto con _id = 65c52d372cdbe1b43d1ea8fe
+error: product.controller-js - Error en getProductsById: CustomError: CustomError: CustomError: No se encontró ningun producto con _id = 65c52d372cdbe1b43d1ea8fe
+error: user.service.js - Error en getUserByField: CustomError: No se encontró ningun user con _id = 65c52d382cdbe1b43d1ea904
+error: user.service.js - Error en getUserByID: CustomError: Error al realizar la solicitud de busqueda de usuarios.

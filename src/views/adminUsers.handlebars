@@ -1,0 +1,53 @@
+
+<div class="container mt-5">
+    <h6 class="h6" >
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Volver al inicio
+        </a>
+    </h6>
+    <h1 class="h1">Lista de Usuarios</h1>
+    <hr/>
+    {{#if arrayusers.length}}
+        <ul class="list-group">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Última Conexión</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each arrayusers}}
+                    <tr>
+                        <td>{{this.first_name}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.role}}</td>
+                        <td>{{this.last_connection}}</td>
+                        <td>
+                            <button type="button" class="btn btn-warning" onclick="changeUserRole('{{this.id}}')">Modificar Rol</button>
+                            <button type="button" class="btn btn-danger" onclick="deleteUser('{{this.id}}')">Eliminar Usuario</button>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        </ul>
+    {{else}}
+        <p>No hay usuarios para mostrar.</p>
+    {{/if}}
+</div>
+
+<!-- Agrega tus scripts JS si es necesario -->
+
+<!-- Agrega los scripts de Bootstrap y jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/adminUsers.js"></script>
+
+</body>
+</html>

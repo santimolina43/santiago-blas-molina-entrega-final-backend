@@ -8,6 +8,12 @@ export const setHandlebars = (app) => {
     });
 
     // Registro el helper de handlebars para evaluar si el usuario es admin o premium 
+    hbs.handlebars.registerHelper('isAdmin', function (value) {
+        if (value === "admin") return true
+        return false;
+    });
+
+    // Registro el helper de handlebars para evaluar si el usuario es admin o premium 
     hbs.handlebars.registerHelper('isAdminOrUserPremium', function (value) {
         if (value === "admin" || value === "premium") return true
         return false;
@@ -34,6 +40,14 @@ export const setHandlebars = (app) => {
     // Registro el helper de handlebars para evaluar si el usuario tiene cargada la documentacion de identificacion
     hbs.handlebars.registerHelper('hasBankStatementDoc', function (documents) {
         if (documents.find(doc => doc.name === "bankStatement")) return true
+        return false;
+    });
+
+    // Registro el helper de handlebars para evaluar si el usuario tiene cargada la documentacion de identificacion
+    hbs.handlebars.registerHelper('hasAllThreeDocuments', function (documents) {
+        if (documents.find(doc => doc.name === "bankStatement") &&
+            documents.find(doc => doc.name === "proofOfAddress") &&
+            documents.find(doc => doc.name === "identification")) return true
         return false;
     });
 

@@ -15,6 +15,11 @@ export default class UsersDAODB {
         let result = await this.model.findOne({email: email});
         return result;
     }
+
+    findOneByField = async(condition) => {
+        let result = await this.model.findOne(condition);
+        return result;
+    }
     
     findById = async(userID) => {
         let result = await this.model.findById(userID)

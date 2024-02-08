@@ -1,4 +1,5 @@
 import { logger } from '../app.js';
+import { format } from 'date-fns';
 import UserService from '../services/user.service.js';
 import jwt from 'jsonwebtoken';
 import { env_parameters_obj } from '../config/env.config.js';
@@ -133,14 +134,23 @@ export const resetPasswordFinalStep = async (req, res) => {
 
 export const changeUserRole = async (req, res) => {
     try {
+        logger.info('user.controller.js - changeUserRole - start')
+        const userLogged = req.user
+        console.log(userLogged)
         const userId = req.params.uid
+        logger.info('user.controller.js - changeUserRole - busco el usuario')
         const userToUpdate = await userService.getUserByIDToBack(userId)
         if (!userToUpdate) return res.status(400).json({ status:"error", error: 'user no encontrado'})
-        if (userToUpdate.status !== "valid") return res.status(501).json({ status:"error", error: 'Debe subir la documentacion correspondiente para poder ser usuario premium'})
         if (userToUpdate.role.toUpperCase() === "PREMIUM") {
+            logger.info('user.controller.js - changeUserRole - si el usuario es premium, procedo a pasarlo a user')
             const updatedUser = await userService.updateUserRole(userToUpdate.email, "user")
             return res.status(200).json({ status: "success", payload: updatedUser })
-        } else if (userToUpdate.role.toUpperCase() === "USER") {
+        } 
+        logger.info('user.controller.js - changeUserRole - verifico si el usuario tiene status valid para modificar el rol')
+        if (userToUpdate.status !== "valid" && userLogged.email === env_parameters_obj.admin.adminEmail) return res.status(501).json({ status:"error", error: 'El usuario debe subir la documentacion correspondiente para poder ser usuario premium'})
+        if (userToUpdate.status !== "valid") return res.status(501).json({ status:"error", error: 'Debe subir la documentacion correspondiente para poder ser usuario premium'})
+        if (userToUpdate.role.toUpperCase() === "USER") {
+            logger.info('user.controller.js - changeUserRole - si el usuario es user y valido, procedo a pasarlo a premium')
             const updatedUser = await userService.updateUserRole(userToUpdate.email, "premium")
             return res.status(200).json({ status: "success", payload: updatedUser })
         }
@@ -155,8 +165,16 @@ export const deleteUser = async (req, res) => {
         logger.info('user.controller.js - deleteUser - Start')
         const userId = req.params.uid
         const userLogged = req.user
-        if (userLogged._id !== userId && req.user.role.toUpperCase() !== "ADMIN") return res.status(400).json({ status:"error", error: 'No estas autorizado para eliminar este usuario'})
-        logger.info('user.controller.js - deleteUser - Deleting user')
+        if (userLogged._id !== userId && req.user.role.toUpperCase() !== "ADMIN") return res.status(501).json({ status:"error", error: 'No estas autorizado para eliminar este usuario'})
+        // Busco al usuario en la base de datos
+        logger.info('user.controller.js - deleteInactiveUsers - busco al usuario en la base de datos')
+        const user = await userService.getUserByIDToBack(userId)
+        if (!user) return res.status(401).json({ status:"error", error: 'Usuario no encontrado'})
+        // Elimino de la base de datos el carrito del usuario
+        logger.info('user.controller.js - deleteInactiveUsers - elimino carrito del usuario')
+        await cartService.deleteCartById(user.cart);
+        // Elimino al usuario de la base de datos
+        logger.info('user.controller.js - deleteInactiveUsers - elimino al usuario')
         const userToDelete = await userService.deleteUser(userId)
         if (userToDelete !== 'Usuario eliminado correctamente') return res.status(400).json({ status:"error", error: 'No ha sido posible eliminar el usuario'})
         logger.info(`user.controller.js - deleteUser - ${userToDelete}`)
@@ -314,6 +332,34 @@ export const renderResetPasswordFinalStep = async (req, res) => {
     } catch (error) {
         logger.error('user.controller.js - Error en renderResetPasswordFinalStep: '+error)
         return res.status(400).json({ status:"error", error: error})
+    }
+}
+
+export const administrateUsers = async (req, res) => {
+    const userEmail = req.user.email
+    req.logger.info('user.controller.js - administrateUsers - start')
+    if (userEmail !== 'adminCoder@coder.com') res.status(404).json({ status:"error", payload: "only acces to user admin"})
+    else {
+    try {
+            req.logger.info('user.controller.js - administrateUsers - busco los usuarios')
+            const users = await userService.getUsers()
+            req.logger.info('user.controller.js - administrateUsers - renderizo la vista de administracion de usuarios')
+            const newArray = users.map(u => (
+                {
+                    first_name: u.first_name, 
+                    last_name: u.last_name,
+                    email: u.email,
+                    last_connection: format(new Date(u.last_connection), "dd/MM/yyyy HH:mm:ss"),
+                    id: u._id,
+                    role: u.role 
+                }
+            ))
+            const usuarios = {arrayusers: newArray}
+            res.render('adminUsers', usuarios)
+        } catch (error) {
+            req.logger.error('user.controller.js - Error en administrateUsers: '+error)
+            return res.status(400).json({ status:"error", payload: error})
+        } 
     }
 }
 

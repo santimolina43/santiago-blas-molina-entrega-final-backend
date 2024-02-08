@@ -1,16 +1,11 @@
 
-
-function addProductToCart(cart_id, product_id) {
-    const quantity = JSON.stringify({quantity: 1})
-    fetch(`/api/cart/${cart_id}/product/${product_id}`, {
-        method: 'POST',
-        body: quantity,
-        headers: {
-            'Content-Type': 'application/json' // Indica que estás enviando JSON
-        }
+function deleteUser(user_id) {
+    fetch(`/api/user/${user_id}`, {
+        method: 'DELETE'
     })
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             if (data.status == "error") {
                 Swal.fire({
                     icon: 'error',
@@ -18,7 +13,17 @@ function addProductToCart(cart_id, product_id) {
                     text: data.error
                 })
             } else {
-                window.location.href = `http://localhost:8080/cart/`;
+                Swal.fire({
+                    icon: 'success',
+                    title: `¡Eliminado!`,
+                    text: 'Usuario eliminado exitosamente',
+                    showConfirmButton: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                      // Redirige a /administrateUsers cuando se hace clic en "OK"
+                      window.location.href = "/user/administrateUsers";
+                    }
+                });;
             }
         })
         .catch(error => {
@@ -29,10 +34,7 @@ function addProductToCart(cart_id, product_id) {
 
 function changeUserRole(uid) {
     fetch(`/api/user/premium/${uid}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json' // Indica que estás enviando JSON
-        }
+        method: 'PUT'
     })
         .then(response => response.json())
         .then(data => {
@@ -50,7 +52,7 @@ function changeUserRole(uid) {
                     showConfirmButton: true
                 }).then((result) => {
                     if (result.isConfirmed) {
-                      window.location.href = `http://localhost:8080/`
+                        window.location.href = "/user/administrateUsers";
                     }
                   });
             }

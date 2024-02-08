@@ -30,7 +30,7 @@ export default class UsersRouter extends RouterClass {
         this.post('/resetpasswordfinalstep', ["PUBLIC"], 'next', {}, resetPasswordFinalStep)
 
         /********* CHANGE ROL USER-PREMIUM *********/    
-        this.put('/premium/:uid', ["USER", "PREMIUM"], 'next', {}, changeUserRole)
+        this.put('/premium/:uid', ["USER", "PREMIUM", "ADMIN"], 'next', {}, changeUserRole)
 
         /********* DELETE USER *********/    
         this.delete('/:uid', ["USER", "ADMIN", "PREMIUM"], 'next', {}, deleteUser)

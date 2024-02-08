@@ -13,7 +13,7 @@ export default () => {
             title: 'productoMock',
             description: 'descripcion de producto',
             price: 100,
-            thumbnail: './src/public/imgs/mosca.jpeg',
+            thumbnail: './src/public/imgs/products/mosca.jpeg',
             code: '#341',
             stock: 10,
             category: 'moscas',

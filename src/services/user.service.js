@@ -204,6 +204,7 @@ class UserService {
                 }
             } catch (err) {
                 if (err.code = 6) logger.info('user.service.js - deleteUser - usuario eliminado sin errores')
+                return 'Usuario eliminado correctamente'
             }
         } catch (error) {
             logger.error('user.service.js - Error en deleteUser: '+error)
@@ -218,7 +219,7 @@ class UserService {
             // const users = await this.getUsers()
             // const userFound = users.find(item => item[propiedad] == valor)
             // Utilizo el método findOne de Mongoose para buscar un usuario por la propiedad y valor
-            const userFound = await this.usersDAO.findOne({ [propiedad]: valor });
+            const userFound = await this.usersDAO.findOneByField({ [propiedad]: valor });
             // Busco el user a traves de la propiedad en el array
             if (userFound) {
                 return userFound

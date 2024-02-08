@@ -2,21 +2,28 @@
 
 <div class="container my-5 general-container">
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <h6 class="h6" >Bienvenido <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/user/profile">{{first_name}}</a></h6>
-        <a class="btn btn-danger" href="https://web-production-59fe.up.railway.app/api/user/logout">Logout</a>
+        <h6 class="h6" >Bienvenido <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/user/profile">{{first_name}}</a></h6>
+        <a class="btn btn-danger" href="http://localhost:8080/api/user/logout">Logout</a>
     </div>
     {{#if (isAdminOrUserPremium role)}}
-        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/realTimeProducts/">Administrate Products</a>   
+        <div>
+            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/realTimeProducts/">Administrate Products</a>   
+        </div>
+    {{/if}}
+    {{#if (isAdmin role)}}
+        <div>
+            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/user/administrateUsers/">Administrate Users</a>   
+        </div>
     {{/if}}
     {{#if (isUserOrUserPremium role)}}
         <div>
-            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://web-production-59fe.up.railway.app/cart/">Carrito</a>
+            <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="http://localhost:8080/cart/">Carrito</a>
         </div>   
     {{/if}}   
     <div style="display: flex; flexdirection: row">
-        <h6>Role: "{{role}}" - </h6>
+        <h6>Role: "{{role}}"</h6>
         {{#if (isUserOrUserPremium role)}}
-        <h6 style="color:blue;" type="button" onClick="changeUserRole('{{id}}')">Change role</h6>
+        <h6 style="color:blue;" type="button" onClick="changeUserRole('{{id}}')">--> Change role</h6>
         {{/if}}
     </div>
     <h1 class="h1">Todos los productos</h1>
@@ -51,7 +58,7 @@
 
     <!-- boton para acceder al chat -->
     <div class="fixed-bottom mb-4 mr-4 float-end fixed-bottom-fix">
-        <a type="button" class="chat-button btn btn-primary float-end me-5 mb-5" href="https://web-production-59fe.up.railway.app/chat">
+        <a type="button" class="chat-button btn btn-primary float-end me-5 mb-5" href="http://localhost:8080/chat">
             Chat
         </a>
     </div>

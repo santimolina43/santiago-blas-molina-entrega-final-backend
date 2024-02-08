@@ -1,5 +1,5 @@
 import RouterClass from '../router.js';
-import { renderLogin, renderRegister, renderResetPassword, renderResetPasswordFinalStep, getUsersProfileView } from '../../controllers/user.controller.js';
+import { renderLogin, renderRegister, renderResetPassword, renderResetPasswordFinalStep, getUsersProfileView, administrateUsers } from '../../controllers/user.controller.js';
 
 // Users Router
 export default class UsersRouter extends RouterClass {
@@ -23,6 +23,9 @@ export default class UsersRouter extends RouterClass {
 
         /********* PROFILE *********/   
         this.get('/profile', ["USER", "ADMIN", "PREMIUM"], 'jwt', {}, getUsersProfileView)
+
+        /********* ADMINISTRATE USERS *********/   
+        this.get('/administrateusers', ["ADMIN"], 'jwt', {}, administrateUsers)
     }
 }
 
