@@ -526,3 +526,4 @@ error: product.controller.js - Error en addNewProduct: CustomError: CustomError:
 error: product.controller.js - Error en deleteProductById: TypeError: Cannot read properties of undefined (reading 'toUpperCase')
 error: product.controller.js - Error en deleteProductById: ReferenceError: sendDeletedProductEmail is not defined
 error: product.controller.js - No es posible eliminar un producto del cual no eres owner
+error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner

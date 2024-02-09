@@ -1,5 +1,5 @@
 import RouterClass from '../router.js';
-import { getProductFromCartById, createNewCart, addProductsToCartById, deleteProductsFromCartById, updateCartById, updateCartByIdAndProductId, deleteAllProductsFromCartById } from '../../controllers/cart.controller.js'
+import { getProductFromCartById, createNewCart, addProductsToCartById, deleteProductsFromCartById, updateCartById, updateCartByIdAndProductId, deleteAllProductsFromCartById, createSessionCheckout } from '../../controllers/cart.controller.js'
 import { finishPurchaseInCartById } from '../../controllers/ticket.controller.js';
 
 // Carts Router
@@ -33,6 +33,9 @@ export default class CartsRouter extends RouterClass {
         
         /********* FINISH PURCHASE IN CART BY ID *********/    
         this.post('/:cid/purchase/', ["USER", "PREMIUM"], 'next', {}, finishPurchaseInCartById)
+        
+        /********* FINISH PURCHASE IN CART BY ID *********/    
+        this.post('/pay/create-checkout-session/:cid', ["USER", "PREMIUM"], 'next', {}, createSessionCheckout)
 
     }
 }

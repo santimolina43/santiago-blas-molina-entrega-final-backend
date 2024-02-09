@@ -1,8 +1,13 @@
+import { env_parameters_obj } from '../config/env.config.js'
 import CartService from '../services/cart.service.js'
 import ProductService from '../services/product.service.js'
+import Stripe from 'stripe'
 
 const cartService = new CartService()
 const productService = new ProductService()
+
+// configuro stripe con la key de desarrollo
+const stripe = new Stripe(env_parameters_obj.stripe.key)
 
 export const getProductFromCartById = async (req, res) => {
     const id = req.params.cid
@@ -110,4 +115,41 @@ export const deleteAllProductsFromCartById = async (req, res) => {
     }
 }
 
-
+export const createSessionCheckout = async (req, res) => {
+    const cart_id = req.params.cid
+    const ticket_id = req.body.ticketId
+    const cartProductsArray = req.body.products
+    try {
+        req.logger.info("cart.controller.js - createSessionCheckout - start")
+        // damos formato al array de productos del carrito
+        req.logger.info("cart.controller.js - createSessionCheckout - damos formato al array de productos del carrito")
+        const products = cartProductsArray.map(item => (
+            {
+                price_data: {
+                    product_data: {
+                        name: item.product.title,
+                        description: item.product.description
+                    },
+                    currency: 'usd',
+                    unit_amount: item.product.price*100
+                },
+                quantity: item.quantity
+            }
+        ))
+        // creamos la sesion de pago de stripe
+        req.logger.info("cart.controller.js - createSessionCheckout - creamos la sesion de pago de stripe")
+        const session = await stripe.checkout.sessions.create({
+            line_items: products,
+            // el modo se refiere en este caso a un unico pago: "payment"
+            mode: 'payment',
+            success_url: `http://localhost:8080/cart/${cart_id}/purchase/${ticket_id}`,
+            cancel_url: `http://localhost:8080/cart/${cart_id}/cancelpurchase/${ticket_id}`
+        })
+        // retornamos la session
+        req.logger.info("cart.controller.js - createSessionCheckout - retornamos la session")
+        return res.json(session)
+    } catch (error) {
+        req.logger.error('cart.controller.js - Error en createSessionCheckout: '+error)
+        return res.status(404).json({ status:"error", payload: error})
+    }
+}

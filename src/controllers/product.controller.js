@@ -119,7 +119,6 @@ export const addNewProduct = async (req, res) => {
     const product = {...req.body, owner: productOwner}
     try {
         const newProduct = await productService.addProduct(product)
-        console.log(newProduct)
         logger.info('product.controller.js - addNewProduct - Producto creado correctamente')
         res.status(200).json({ status: "success", payload: newProduct })
     } catch (error) {

@@ -1,6 +1,6 @@
 import RouterClass from '../router.js';
 import { getUsersCartView } from '../../controllers/user.controller.js';
-import { getTicketView } from '../../controllers/ticket.controller.js';
+import { getCancelPurchaseView, getTicketView } from '../../controllers/ticket.controller.js';
 
 // Carts Router
 export default class CartsRouter extends RouterClass {
@@ -13,8 +13,11 @@ export default class CartsRouter extends RouterClass {
         /********* CARRITO *********/   
         this.get('/', ["USER", "PREMIUM"], 'next', {}, getUsersCartView)
         
-        /********* PURCHASE *********/
+        /********* PAYMENT SUCCESS *********/
         this.get('/:cid/purchase/:tid', ["USER", "PREMIUM"], 'next', {}, getTicketView)
+        
+        /********* PAYMENT CANCEL *********/
+        this.get('/:cid/cancelpurchase/:tid', ["USER", "PREMIUM"], 'next', {}, getCancelPurchaseView)
 
     }
 }

@@ -76,6 +76,21 @@ class ProductService {
         }
     }
 
+    /********* UPDATE PRODUCT *********/
+    async updateProductAndIncQuantity(id, quantity) {
+        try {
+            // Obtengo el stock actual del producto
+            const product = await this.productsDAO.findOne(id)
+            const actualStock = product.stock
+            // Creo el objeto del producto modificado (let updatedProduct = )
+            await this.productsDAO.updateProductAndSetCampos(id, {stock: actualStock + quantity})
+            return (await this.getProducts()).find(item => item._id.toString() === id)
+        } catch (error) {
+            logger.error('product.service.js - Error en updateProduct: '+error)
+            throw new CustomError(error, EErros.DATABASES_ERROR)
+        }
+    }
+
     /********* DELETE PRODUCT *********/
     async deleteProduct(id) {
         try {

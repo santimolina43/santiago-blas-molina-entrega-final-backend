@@ -136,7 +136,6 @@ export const changeUserRole = async (req, res) => {
     try {
         logger.info('user.controller.js - changeUserRole - start')
         const userLogged = req.user
-        console.log(userLogged)
         const userId = req.params.uid
         logger.info('user.controller.js - changeUserRole - busco el usuario')
         const userToUpdate = await userService.getUserByIDToBack(userId)

@@ -40,6 +40,10 @@ const env_parameters = (env) => {
         nodemailer: {
             email: process.env.NODEMAILER_EMAIL,
             password: process.env.NODEMAILER_PASSWORD
+        },
+        stripe: {
+            key: process.env.STRIPE_KEY,
+            secretKey: process.env.STRIPE_SECRET_KEY
         }
     }
 }

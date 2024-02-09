@@ -56,6 +56,7 @@
     <div class="text-end">
         <p>Total: ${{#if cart.products}}{{calculateTotal cart.products}}{{else}}0{{/if}}</p> 
         <button class="btn btn-primary" onclick="finishPurchase('{{cart._id}}')">Finalizar compra</button>
+        {{!-- <button class="btn btn-primary" onclick="payCartProducts('{{cart._id}}')">Pagar</button> --}}
     </div>
     <hr/>
 </div>

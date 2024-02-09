@@ -16,10 +16,11 @@ export default class TicketsDAODB {
         return result;
     }
 
-    createNew = async(uniqueCode, amount, purchaserEmail) => {
+    createNew = async(uniqueCode, amount, purchaserEmail, soldProducts) => {
         let result = await this.model.create({code: uniqueCode,
                                               amount: amount,
-                                              purchaser: purchaserEmail});
+                                              purchaser: purchaserEmail,
+                                              productsBought: soldProducts});
         return result
     }
 

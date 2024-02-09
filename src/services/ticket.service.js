@@ -48,7 +48,7 @@ class TicketService {
     }
 
     /********* CREATE TICKET *********/
-    async createTicket(amount, purchaserEmail) {
+    async createTicket(amount, purchaserEmail, soldProducts) {
         try {
             // Generamos un código único
             let uniqueCode;
@@ -59,7 +59,7 @@ class TicketService {
                 isCodeUnique = !existingTicket;
             }
             // Creamos el ticket en la base de datos
-            let newTicket = await this.ticketsDAO.createNew(uniqueCode, amount, purchaserEmail);
+            let newTicket = await this.ticketsDAO.createNew(uniqueCode, amount, purchaserEmail, soldProducts);
             return newTicket
         } catch (error) {
             logger.error('ticket.service.js - Error en createTicket: '+error)
@@ -80,9 +80,13 @@ class TicketService {
             const userEmail = cartUser.email
             // Obtengo el total de compra
             let totalAmount = 0
+            let soldProducts = []
             cart.products.forEach(async item => {
                 // Si tengo stock del producto, entonces lo sumo y resto stock al producto
                 if (item.product.stock >= item.quantity) {
+                    // agrego el producto y la quantity al array que pasare como parametro al ticket, para
+                    // restaurar los productos en caso de que cancelen la compra
+                    soldProducts.push({productId: item.product._id.toString(), quantity: item.quantity})
                     const precioProducto = item.product.price;
                     const cantidadProducto = item.quantity;
                     // Suma el producto de la cantidad por el precio de cada producto al total
@@ -96,7 +100,7 @@ class TicketService {
             })
             // Creamos el ticket de compra
             if (totalAmount > 0) {
-                const ticket = await this.createTicket(totalAmount, userEmail)
+                const ticket = await this.createTicket(totalAmount, userEmail, soldProducts)
                 if (!ticket._id) throw new CustomError('Error al crear el ticket', EErros.DATABASES_ERROR)
                 return ticket
             } else {
