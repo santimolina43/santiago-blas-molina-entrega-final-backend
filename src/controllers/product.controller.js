@@ -22,7 +22,7 @@ export const getHomeProducts = async (req, res) => {
                          + (req.query.stock ? `&stock=${req.query.stock}` : '')
                          + (req.query.sort ? `&sort=${req.query.sort}` : '')
     // Hago la peticion a la api de los productos pasandole los query params que recibimos en /home
-    fetch(`http://localhost:3000/api/products${requesturl}`, {
+    fetch(`https://web-production-59fe.up.railway.app/api/products${requesturl}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
