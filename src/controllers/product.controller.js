@@ -22,7 +22,7 @@ export const getHomeProducts = async (req, res) => {
                          + (req.query.stock ? `&stock=${req.query.stock}` : '')
                          + (req.query.sort ? `&sort=${req.query.sort}` : '')
     // Hago la peticion a la api de los productos pasandole los query params que recibimos en /home
-    fetch(`http://localhost:8080/api/products${requesturl}`, {
+    fetch(`http://localhost:3000/api/products${requesturl}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -89,8 +89,8 @@ export const getProducts = async (req, res) => {
         page: products.page,
         hasPrevPage,
         hasNextPage,
-        prevLink: hasPrevPage ? `http://localhost:8080/?page=${prevPage}${queryParams}` : null,
-        nextLink: hasNextPage ? `http://localhost:8080/?page=${nextPage}${queryParams}` : null
+        prevLink: hasPrevPage ? `https://web-production-59fe.up.railway.app/?page=${prevPage}${queryParams}` : null,
+        nextLink: hasNextPage ? `https://web-production-59fe.up.railway.app/?page=${nextPage}${queryParams}` : null
         })
     } catch {
         req.logger.error('product.controller.js - Error en getProducts: '+error)
@@ -113,7 +113,7 @@ export const getProductsById = async (req, res) => {
 export const addNewProduct = async (req, res) => {
     logger.info('product.controller.js - addNewProduct - Start')
     req.body.status = req.body.status == 'true' ? true : false
-    req.body.thumbnail = `http://localhost:8080/imgs/products/${req.file.filename}`
+    req.body.thumbnail = `https://web-production-59fe.up.railway.app/imgs/products/${req.file.filename}`
     req.logger.debug('product.controller.js - user: '+req.user.email)
     const productOwner = req.user.email === env_parameters_obj.admin.adminEmail ? env_parameters_obj.admin.adminAlias : req.user.email 
     const product = {...req.body, owner: productOwner}

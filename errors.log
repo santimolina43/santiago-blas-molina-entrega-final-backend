@@ -527,3 +527,4 @@ error: product.controller.js - Error en deleteProductById: TypeError: Cannot rea
 error: product.controller.js - Error en deleteProductById: ReferenceError: sendDeletedProductEmail is not defined
 error: product.controller.js - No es posible eliminar un producto del cual no eres owner
 error: cart.controller.js - addProductsToCartById - No es posible agregar un producto a tu carrito del cual eres owner
+error: Ocurrió un error: No se pudo completar la solicitud. {"stack":"Error: No se pudo completar la solicitud.\n    at file:///Users/santimolina/Desktop/Curso%20Backend/santiago-blas-molina-entrega-final-backend/src/controllers/product.controller.js:33:19\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}

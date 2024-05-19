@@ -94,7 +94,7 @@ const initializePassport = () => {
     passport.use('github', new GitHubStrategy({
         clientID: env_parameters_obj.gitHub.clientId,
         clientSecret: env_parameters_obj.gitHub.clientSecret,
-        callbackURL: 'http://localhost:8080/api/user/githubcallback'
+        callbackURL: 'https://web-production-59fe.up.railway.app/api/user/githubcallback'
     }, async(accessToken, refreshToken, profile, done) => {
         try {
             const user = await userService.getUserByEmailToBack(profile._json.login+'@gmail.com')

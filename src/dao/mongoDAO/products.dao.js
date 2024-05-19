@@ -32,6 +32,8 @@ export default class ProductsDAODB {
     }
 
     paginateProducts = async(query, filters) => {
+        console.log(query)
+        console.log(filters)
         const products = await this.model.paginate(query, filters)
         return products
     }

@@ -18,7 +18,7 @@ function addProductToCart(cart_id, product_id) {
                     text: data.error.errorMsg
                 })
             } else {
-                window.location.href = `http://localhost:8080/cart/`;
+                window.location.href = `https://web-production-59fe.up.railway.app/cart/`;
             }
         })
         .catch(error => {
@@ -44,7 +44,7 @@ function restProductFromCart(cart_id, product_id) {
                     text: data.error.errorMsg
                 })
             } else {
-                window.location.href = `http://localhost:8080/cart/`;
+                window.location.href = `https://web-production-59fe.up.railway.app/cart/`;
             }
         })
         .catch(error => {

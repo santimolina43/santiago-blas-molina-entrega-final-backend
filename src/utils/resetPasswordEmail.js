@@ -21,7 +21,7 @@ export const sendResetPasswordEmail = async (userToReset, token) => {
         <div>
             <h1> You have requested to reset your password </h1>
             <br/>
-            <p>Click here to reset your password: http://localhost:8080/user/resetPassword/${token}<p/>
+            <p>Click here to reset your password: https://web-production-59fe.up.railway.app/user/resetPassword/${token}<p/>
             <p>Si no solicitaste un reseteo de contraseña, ignora este correo.<p/>
             <br/>
             <p>Muchas gracias.<p/>

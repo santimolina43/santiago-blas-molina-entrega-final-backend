@@ -142,8 +142,8 @@ export const createSessionCheckout = async (req, res) => {
             line_items: products,
             // el modo se refiere en este caso a un unico pago: "payment"
             mode: 'payment',
-            success_url: `http://localhost:8080/cart/${cart_id}/purchase/${ticket_id}`,
-            cancel_url: `http://localhost:8080/cart/${cart_id}/cancelpurchase/${ticket_id}`
+            success_url: `https://web-production-59fe.up.railway.app/cart/${cart_id}/purchase/${ticket_id}`,
+            cancel_url: `https://web-production-59fe.up.railway.app/cart/${cart_id}/cancelpurchase/${ticket_id}`
         })
         // retornamos la session
         req.logger.info("cart.controller.js - createSessionCheckout - retornamos la session")
